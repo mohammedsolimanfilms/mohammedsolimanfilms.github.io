@@ -51,11 +51,6 @@ footer{padding:27px 6%;background:#070707;color:#5d5d5d;display:flex;justify-con
 html{scroll-padding-top:90px}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");mix-blend-mode:screen}
 .scroll-progress{position:fixed;top:0;left:0;width:0;height:2px;background:#fff;z-index:10001;box-shadow:0 0 14px rgba(255,255,255,.65)}
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:10000;border-radius:50%;transform:translate(-50%,-50%);opacity:0}
-.cursor-dot{width:5px;height:5px;background:#fff;mix-blend-mode:difference}
-.cursor-ring{width:34px;height:34px;border:1px solid rgba(255,255,255,.65);transition:width .25s,height .25s,border-color .25s,opacity .25s;mix-blend-mode:difference}
-body.cursor-ready .cursor-dot,body.cursor-ready .cursor-ring{opacity:1}
-body.cursor-hover .cursor-ring{width:58px;height:58px;border-color:#fff}
 .nav-links a{position:relative}
 .nav-links a:after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:1px;background:#fff;transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav-links a:hover:after{transform:scaleX(1);transform-origin:left}
@@ -98,13 +93,24 @@ body.cursor-hover .cursor-ring{width:58px;height:58px;border-color:#fff}
 .contact>*{position:relative;z-index:1}
 footer a{transition:color .25s}
 footer a:hover{color:#fff}
-@media (pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
 @media(max-width:800px){.hero:before{width:90vw;height:90vw;right:-40vw}.contact:before{display:none}}
+
+/* Typography polish: larger, clearer secondary copy */
+.hero-description{font-size:19px;line-height:1.75;color:#d8d8d8}
+.section-label{font-size:11px;letter-spacing:3px}
+.video-note{font-size:13px;line-height:1.6}
+.project-category{font-size:11px;letter-spacing:2.2px}
+.project-description{font-size:15px;line-height:1.7;color:#a3a3a3}
+.detail-block{font-size:15px;line-height:1.75;color:#a3a3a3}
+.detail-block strong{font-size:16px;color:#fff}
+.service p{font-size:15px;line-height:1.75}
+.contact-text{font-size:17px;line-height:1.7}
+@media(max-width:800px){.hero-description{font-size:17px}.project-description{font-size:14px}.detail-block{font-size:14px}.service p{font-size:14px}.contact-text{font-size:16px}}
+@media(max-width:520px){.project-category{font-size:9px}.project-description{font-size:13px}.detail-block{font-size:13px}}
 </style>
 
 <style>
 html{scroll-behavior:smooth}
-body{cursor:none}
 .preloader{position:fixed;inset:0;background:#090909;color:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .8s ease,visibility .8s ease}
 .preloader.done{opacity:0;visibility:hidden;pointer-events:none}
 .preloader-mark{font-size:clamp(32px,5vw,72px);font-weight:800;letter-spacing:-.07em}.preloader-mark span{opacity:.45}
@@ -125,8 +131,6 @@ body{cursor:none}
 .hero-image img{transition:transform 1.2s cubic-bezier(.16,1,.3,1),filter .8s ease}
 .hero-image:hover img{transform:scale(1.045);filter:contrast(1.08)}
 .project{position:relative;overflow:hidden}
-.project:after{content:"VIEW PROJECT ↗";position:absolute;right:18px;bottom:18px;font:600 9px/1 monospace;letter-spacing:.16em;background:#fff;color:#090909;padding:9px 11px;transform:translateY(150%);transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.project:hover:after{transform:none}
 .project iframe{transition:transform .8s cubic-bezier(.16,1,.3,1);transform:scale(1.001)}
 .project:hover iframe{transform:scale(1.025)}
 .reel-container{position:relative}
@@ -135,16 +139,12 @@ body{cursor:none}
 .section-label:hover{letter-spacing:.28em}
 body.page-ready .reveal{animation-duration:.9s}
 @media(pointer:fine){
-.cursor-dot{position:fixed;width:6px;height:6px;background:#fff;border-radius:50%;left:0;top:0;transform:translate(-50%,-50%);z-index:100000;pointer-events:none}
-.cursor-ring{position:fixed;width:34px;height:34px;border:1px solid rgba(255,255,255,.65);border-radius:50%;left:0;top:0;transform:translate(-50%,-50%);z-index:99999;pointer-events:none;transition:width .25s,height .25s,border-color .25s,background .25s}
-body.cursor-hover .cursor-ring{width:56px;height:56px;background:rgba(255,255,255,.08);border-color:#fff}
 }
-@media(pointer:coarse){body{cursor:auto}}
 </style>
 </head>
 <body>
 <div class="preloader" id="preloader"><div class="preloader-mark">MS<span>.</span></div><div class="preloader-bar"><i></i></div><div class="preloader-count">00</div></div>
-<div class="scroll-progress" id="scrollProgress"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
 <nav>
 <a href="#top" class="logo">MOHAMMED <span>SOLIMAN</span></a>
 <ul class="nav-links"><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
@@ -194,45 +194,8 @@ const reveals=document.querySelectorAll('.reveal');if('IntersectionObserver'in w
 (() => {
   const root=document.documentElement, body=document.body;
   const progress=document.getElementById('scrollProgress');
-  const dot=document.getElementById('cursorDot'), ring=document.getElementById('cursorRing');
-  let rx=0,ry=0,mx=0,my=0;
-  const fine=matchMedia('(pointer:fine)').matches;
-  if(fine){
-    body.classList.add('cursor-ready');
-    addEventListener('mousemove',e=>{
-      mx=e.clientX; my=e.clientY;
-      dot.style.left=mx+'px'; dot.style.top=my+'px';
-    });
-    function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)} loop();
-    document.querySelectorAll('a,button,.project,.hero-image').forEach(el=>{
-      el.addEventListener('mouseenter',()=>body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave',()=>body.classList.remove('cursor-hover'));
-    });
-  }
   const updateProgress=()=>{const h=root.scrollHeight-innerHeight;progress.style.width=(h>0?(scrollY/h)*100:0)+'%'};
   addEventListener('scroll',updateProgress,{passive:true}); updateProgress();
-
-  // Subtle mouse parallax in hero — premium, not distracting.
-  const hero=document.querySelector('.hero'), image=document.querySelector('.hero-image'), content=document.querySelector('.hero-content');
-  if(fine && hero){
-    hero.addEventListener('mousemove',e=>{
-      const r=hero.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
-      if(image) image.style.transform=`perspective(1100px) rotateY(${x*2.2}deg) rotateX(${y*-1.7}deg) translate3d(${x*-8}px,${y*-5}px,0)`;
-      if(content) content.style.transform=`translate3d(${x*5}px,${y*3}px,0)`;
-    });
-    hero.addEventListener('mouseleave',()=>{
-      if(image) image.style.transform=''; if(content) content.style.transform='';
-    });
-  }
-
-  // Magnetic interaction for primary actions.
-  if(fine) document.querySelectorAll('.btn').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-      const r=btn.getBoundingClientRect(), x=e.clientX-r.left-r.width/2, y=e.clientY-r.top-r.height/2;
-      btn.style.transform=`translate(${x*.12}px,${y*.12}px)`;
-    });
-    btn.addEventListener('mouseleave',()=>btn.style.transform='');
-  });
 
   // Staggered reveals for project cards.
   document.querySelectorAll('.projects-grid .project').forEach((el,i)=>el.style.transitionDelay=(i*.08)+'s');

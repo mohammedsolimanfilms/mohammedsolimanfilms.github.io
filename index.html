@@ -109,41 +109,8 @@ footer a:hover{color:#fff}
 @media(max-width:520px){.project-category{font-size:9px}.project-description{font-size:13px}.detail-block{font-size:13px}}
 </style>
 
-<style>
-html{scroll-behavior:smooth}
-.preloader{position:fixed;inset:0;background:#090909;color:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity .8s ease,visibility .8s ease}
-.preloader.done{opacity:0;visibility:hidden;pointer-events:none}
-.preloader-mark{font-size:clamp(32px,5vw,72px);font-weight:800;letter-spacing:-.07em}.preloader-mark span{opacity:.45}
-.preloader-bar{width:min(240px,42vw);height:1px;background:#333;overflow:hidden}.preloader-bar i{display:block;width:0;height:100%;background:#fff;animation:loadbar 1.5s cubic-bezier(.77,0,.18,1) forwards}
-.preloader-count{font:500 10px/1 monospace;letter-spacing:.2em;opacity:.55}
-@keyframes loadbar{to{width:100%}}
-.hero-title .hero-line{overflow:hidden;display:block}
-.hero-title .hero-word{display:inline-block;will-change:transform,opacity}
-.hero-title .hero-line:nth-child(1) .hero-word{animation:titleIn 1s cubic-bezier(.16,1,.3,1) .35s both}
-.hero-title .hero-line:nth-child(2) .hero-word{animation:titleIn 1.1s cubic-bezier(.16,1,.3,1) .48s both}
-.hero-title .hero-line:nth-child(3) .hero-word{animation:titleIn 1.15s cubic-bezier(.16,1,.3,1) .61s both}
-@keyframes titleIn{from{transform:translateY(110%) skewY(5deg);opacity:0;filter:blur(8px)}to{transform:none;opacity:1;filter:none}}
-.hero-title .hero-word{transition:transform .25s ease}
-.hero-title:hover .hero-line:nth-child(1) .hero-word{transform:translateX(12px)}
-.hero-title:hover .hero-line:nth-child(2) .hero-word{transform:translateX(-8px)}
-.hero-title:hover .hero-line:nth-child(3) .hero-word{transform:translateX(16px)}
-.hero-image{will-change:transform;overflow:hidden}
-.hero-image img{transition:transform 1.2s cubic-bezier(.16,1,.3,1),filter .8s ease}
-.hero-image:hover img{transform:scale(1.045);filter:contrast(1.08)}
-.project{position:relative;overflow:hidden}
-.project iframe{transition:transform .8s cubic-bezier(.16,1,.3,1);transform:scale(1.001)}
-.project:hover iframe{transform:scale(1.025)}
-.reel-container{position:relative}
-.reel-container:after{content:"SHOWREEL / 2026";position:absolute;left:16px;bottom:14px;z-index:2;pointer-events:none;font:600 9px/1 monospace;letter-spacing:.16em;background:rgba(0,0,0,.7);padding:8px 9px;color:#fff}
-.section-label{transition:letter-spacing .4s ease}
-.section-label:hover{letter-spacing:.28em}
-body.page-ready .reveal{animation-duration:.9s}
-@media(pointer:fine){
-}
-</style>
 </head>
 <body>
-<div class="preloader" id="preloader"><div class="preloader-mark">MS<span>.</span></div><div class="preloader-bar"><i></i></div><div class="preloader-count">00</div></div>
 <div class="scroll-progress" id="scrollProgress"></div>
 <nav>
 <a href="#top" class="logo">MOHAMMED <span>SOLIMAN</span></a>
@@ -163,16 +130,21 @@ body.page-ready .reveal{animation-duration:.9s}
 </header>
 <section class="showreel" id="showreel"><div class="section-label reveal">01 — Showreel</div><h2 class="section-title reveal">Selected work.</h2><div class="reel-container reveal"><iframe src="https://go.screenpal.com/player/cOQhY9nwwfJ?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1&width=100%&height=100%&oembed=1" allow="fullscreen *;" allowfullscreen scrolling="no" title="Mohammed Soliman Showreel"></iframe></div><p class="video-note reveal">Showreel — selected edits, creative production and visual storytelling.</p></section>
 <section id="work"><div class="section-label reveal">02 — Selected Projects</div><h2 class="section-title reveal">Work that speaks<br>for itself.</h2><div class="projects-grid">
-<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17575&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Promo"></iframe></div><div class="project-info"><div class="project-category">Promo</div><h3 class="project-title">Selected Work 01</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17578&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Cinematic Commercial"></iframe></div><div class="project-info"><div class="project-category">Cinematic Commercial</div><h3 class="project-title">Selected Work 02</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17579&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Teaser"></iframe></div><div class="project-info"><div class="project-category">Teaser</div><h3 class="project-title">Selected Work 03</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfB?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 04"></iframe></div><div class="project-info"><div class="project-category">Reel 04</div><h3 class="project-title">Selected Work 04</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfz?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 05"></iframe></div><div class="project-info"><div class="project-category">Reel 05</div><h3 class="project-title">Selected Work 05</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfa?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 06"></iframe></div><div class="project-info"><div class="project-category">Reel 06</div><h3 class="project-title">Selected Work 06</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfA?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 07"></iframe></div><div class="project-info"><div class="project-category">Reel 07</div><h3 class="project-title">Selected Work 07</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfy?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 08"></iframe></div><div class="project-info"><div class="project-category">Reel 08</div><h3 class="project-title">Selected Work 08</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfx?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 09"></iframe></div><div class="project-info"><div class="project-category">Reel 09</div><h3 class="project-title">Selected Work 09</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
-<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwf4?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 10"></iframe></div><div class="project-info"><div class="project-category">Reel 10</div><h3 class="project-title">Selected Work 10</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><video controls preload="metadata" playsinline><source src="videos/campaign-el-gaber-group-1.mp4" type="video/mp4"></video></div><div class="project-info"><div class="project-category">Campaign</div><h3 class="project-title">كامبين الجابر جروب</h3><p class="project-description">Creative campaign — video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><video controls preload="metadata" playsinline><source src="videos/campaign-el-gaber-group-2.mp4" type="video/mp4"></video></div><div class="project-info"><div class="project-category">Campaign</div><h3 class="project-title">كامبين الجابر جروب</h3><p class="project-description">Creative campaign — video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><video controls preload="metadata" playsinline><source src="videos/reel-4.mp4" type="video/mp4"></video></div><div class="project-info"><div class="project-category">Reel 04</div><h3 class="project-title">ريل 4</h3><p class="project-description">Reel — video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><video controls preload="metadata" playsinline><source src="videos/markaz-etkalem.mp4" type="video/mp4"></video></div><div class="project-info"><div class="project-category">Center</div><h3 class="project-title">مركز اتكلم</h3><p class="project-description">Creative content — video editing and visual storytelling.</p></div></article>
+
+<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17575&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Promo"></iframe></div><div class="project-info"><div class="project-category">01</div><h3 class="project-title">Selected Work 01</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17578&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Cinematic Commercial"></iframe></div><div class="project-info"><div class="project-category">02</div><h3 class="project-title">Selected Work 02</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://viddler.com/embed/player?id=17579&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Teaser"></iframe></div><div class="project-info"><div class="project-category">03</div><h3 class="project-title">Selected Work 03</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfB?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 04"></iframe></div><div class="project-info"><div class="project-category">Project 04</div><h3 class="project-title">Selected Work 04</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfz?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 05"></iframe></div><div class="project-info"><div class="project-category">Project 05</div><h3 class="project-title">Selected Work 05</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfa?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 06"></iframe></div><div class="project-info"><div class="project-category">Project 06</div><h3 class="project-title">Selected Work 06</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfA?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 07"></iframe></div><div class="project-info"><div class="project-category">Project 07</div><h3 class="project-title">Selected Work 07</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfy?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 08"></iframe></div><div class="project-info"><div class="project-category">Project 08</div><h3 class="project-title">Selected Work 08</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwfx?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 09"></iframe></div><div class="project-info"><div class="project-category">Project 09</div><h3 class="project-title">Selected Work 09</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
+<article class="project reveal"><div class="project-video"><iframe src="https://go.screenpal.com/player/cOQhYNnwwf4?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Project 10"></iframe></div><div class="project-info"><div class="project-category">07</div><h3 class="project-title">Selected Work 10</h3><p class="project-description">Video editing and visual storytelling.</p></div></article>
 </div></section>
 <section id="services" class="services"><div class="section-label reveal">03 — What I Do</div><h2 class="section-title reveal">More than<br>just editing.</h2><div class="services-grid">
 <div class="service reveal"><div class="service-number">01</div><h3>Video Editing</h3><p>Editing commercials, reels and cinematic content with a focus on storytelling, pacing, sound and visuals.</p></div>
@@ -228,18 +200,5 @@ const reveals=document.querySelectorAll('.reveal');if('IntersectionObserver'in w
 })();
 </script>
 
-<script>
-(() => {
-  const loader=document.getElementById('preloader'), count=loader?.querySelector('.preloader-count');
-  let n=0;
-  const tick=setInterval(()=>{n=Math.min(100,n+Math.floor(Math.random()*13)+7);if(count)count.textContent=String(n).padStart(2,'0');if(n>=100)clearInterval(tick)},80);
-  window.addEventListener('load',()=>setTimeout(()=>{if(count)count.textContent='100';loader?.classList.add('done');document.body.classList.add('page-ready')},650));
-  // Smooth section transitions: links get a tiny cinematic lift before scrolling.
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
-  }));
-})();
-</script>
 </body>
 </html>

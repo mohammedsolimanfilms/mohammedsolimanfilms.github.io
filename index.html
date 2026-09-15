@@ -15,7 +15,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/satoshi@5.0.18/400.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/satoshi@5.0.18/500.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/satoshi@5.0.18/700.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/satoshi@5.0.18/900.css">
 
 <style>
 :root{
@@ -308,6 +308,20 @@ footer a:hover{color:#fff}
     animation:none!important;transition-duration:.01ms!important;
   }
 }
+
+/* 2026 portfolio typography + beige accent */
+:root{--beige:#d4b895;--beige-soft:rgba(212,184,149,.12)}
+.hero h1,.section-title,.project-title,.service h3,.about-text,.contact h2,.contact:after{
+  font-family:"Satoshi","Manrope",sans-serif;font-weight:800;
+}
+body{font-family:"Manrope",Arial,sans-serif}
+.eyebrow,.section-label,.project-category,.service-number,.hero-scroll{
+  font-family:"IBM Plex Mono",monospace;
+}
+.nav-links a:after{background:var(--beige)}
+.btn-primary{background:var(--beige);border-color:var(--beige);color:#111}
+.project-info:after{color:#5c5146}
+
 </style>
 </head>
 
@@ -378,169 +392,55 @@ footer a:hover{color:#fff}
   <h2 class="section-title">Work that speaks<br>for itself.</h2>
 
   <div class="projects-grid">
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQoXmnwMmW?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
+</div><div class="project-info"><div class="project-category">Campaign</div><h3 class="project-title">El Gaber Group Campaign</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://viddler.com/embed/player?id=17575&color=default"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 01"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Promo</div>
-        <h3 class="project-title">Selected Work 01</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://viddler.com/embed/player?id=17575&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Promo"></iframe>
+</div><div class="project-info"><div class="project-category">Promo</div><h3 class="project-title">Promo</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://viddler.com/embed/player?id=17578&color=default"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 02"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Cinematic Commercial</div>
-        <h3 class="project-title">Selected Work 02</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQolfnwMJ7?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Massar Real Estate Development"></iframe>
+</div><div class="project-info"><div class="project-category">Real Estate</div><h3 class="project-title">Massar Real Estate Development</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://viddler.com/embed/player?id=17579&color=default"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 03"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Teaser</div>
-        <h3 class="project-title">Selected Work 03</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQolPnwMNh?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Khan Restaurant Teaser"></iframe>
+</div><div class="project-info"><div class="project-category">Teaser</div><h3 class="project-title">Khan Restaurant Teaser</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <!-- Massar replaces the old Reel 4 -->
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQolfnwMJ7?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Massar"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Massar</div>
-        <h3 class="project-title">Massar</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQolPnwMN1?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Abdel Rahim Masoud Group for Electrical Appliances"></iframe>
+</div><div class="project-info"><div class="project-category">Commercial</div><h3 class="project-title">Abdel Rahim Masoud Group for Electrical Appliances</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfz?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 05"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 05</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQhYNnwwfa?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Rokna Dessert Ad"></iframe>
+</div><div class="project-info"><div class="project-category">Ad</div><h3 class="project-title">Rokna Dessert Ad</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfa?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 06"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 06</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQhYNnwwfA?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Shish Kebab Restaurant"></iframe>
+</div><div class="project-info"><div class="project-category">Restaurant</div><h3 class="project-title">Shish Kebab Restaurant</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfA?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 07"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 07</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQolPnwMNi?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Bashamel Restaurant"></iframe>
+</div><div class="project-info"><div class="project-category">Restaurant</div><h3 class="project-title">Bashamel Restaurant</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfy?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 08"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 08</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQoXmnwMm9?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
+</div><div class="project-info"><div class="project-category">Campaign</div><h3 class="project-title">El Gaber Group Campaign</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfx?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 09"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 09</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQhYNnwwfy?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Abdel Rahim Masoud Group for Electrical Appliances"></iframe>
+</div><div class="project-info"><div class="project-category">Commercial</div><h3 class="project-title">Abdel Rahim Masoud Group for Electrical Appliances</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQhYNnwwf4?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 10"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Reel</div>
-        <h3 class="project-title">Selected Work 10</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://viddler.com/embed/player?id=17579&color=default" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Khan Restaurant Teaser"></iframe>
+</div><div class="project-info"><div class="project-category">Teaser</div><h3 class="project-title">Khan Restaurant Teaser</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <!-- New El Gaber Group reels -->
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQoXmnwMmW?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Campaign</div>
-        <h3 class="project-title">El Gaber Group Campaign</h3>
-        <p class="project-description">Campaign editing and visual storytelling.</p>
-      </div>
-    </article>
+<article class="project reveal"><div class="project-video">
+<iframe src="https://go.screenpal.com/player/cOQhYNnwwfx?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 09"></iframe>
+</div><div class="project-info"><div class="project-category">Reel</div><h3 class="project-title">Reel 09</h3><p class="project-description">Video editing, creative production, visual storytelling, pacing and post-production.</p></div></article>
 
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQoXmnwMm9?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Campaign</div>
-        <h3 class="project-title">El Gaber Group Campaign</h3>
-        <p class="project-description">Campaign editing and visual storytelling.</p>
-      </div>
-    </article>
-
-    <!-- New Markaz Etkalem project -->
-    <article class="project">
-      <div class="project-video">
-        <iframe src="https://go.screenpal.com/player/cOQoXmnwMmR?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
-          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Markaz Etkalem"></iframe>
-      </div>
-      <div class="project-info">
-        <div class="project-category">Campaign</div>
-        <h3 class="project-title">Markaz Etkalem</h3>
-        <p class="project-description">Video editing and visual storytelling.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
+</div></section>
 <section id="services" class="services">
   <div class="section-label">03 — What I Do</div>
   <h2 class="section-title">More than<br>just editing.</h2>

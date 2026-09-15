@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Soliman — Video Editor & Creative Production</title>
+<meta name="description" content="Mohammed Soliman — Video Editor, Creative Producer and Production Manager. Commercials, social media content, cinematic storytelling and full production.">
+<meta name="author" content="Mohammed Soliman">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#090909">
+<meta property="og:title" content="Mohammed Soliman — Video Editor & Creative Production">
+<meta property="og:description" content="Video editing, creative production and visual storytelling.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#090909;
+  --soft:#0e0e0e;
+  --card:#111;
+  --line:#242424;
+  --text:#f5f5f5;
+  --muted:#a7a7a7;
+  --muted2:#777;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg);scroll-padding-top:90px}
+body{
+  background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body.menu-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:#fff;color:#000}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:20px 6%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(9,9,9,.76);backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);
+}
+.logo{font-size:17px;font-weight:800;letter-spacing:-.4px}
+.logo span{color:#8c8c8c}
+.nav-links{display:flex;gap:32px;list-style:none;font-size:12px;color:#bdbdbd}
+.nav-links a{position:relative;transition:color .25s ease}
+.nav-links a:after{
+  content:"";position:absolute;left:0;bottom:-7px;width:100%;height:1px;
+  background:#fff;transform:scaleX(0);transform-origin:right;
+  transition:transform .3s var(--ease)
+}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover:after{transform:scaleX(1);transform-origin:left}
+
+.menu-toggle{
+  display:none;width:42px;height:42px;border:1px solid #2a2a2a;
+  background:transparent;color:#fff;border-radius:50%;cursor:pointer;
+  align-items:center;justify-content:center;
+}
+.menu-toggle span,.menu-toggle span:before,.menu-toggle span:after{
+  width:16px;height:1px;background:#fff;display:block;position:relative;
+  transition:.25s ease;
+}
+.menu-toggle span:before,.menu-toggle span:after{content:"";position:absolute;left:0}
+.menu-toggle span:before{top:-5px}.menu-toggle span:after{top:5px}
+.menu-toggle.active span{background:transparent}
+.menu-toggle.active span:before{top:0;transform:rotate(45deg)}
+.menu-toggle.active span:after{top:0;transform:rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:999;background:rgba(8,8,8,.98);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;pointer-events:none;transition:.28s ease;
+}
+.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto}
+.mobile-menu-links{list-style:none;text-align:center}
+.mobile-menu-links li{margin:18px 0}
+.mobile-menu-links a{font-size:38px;font-weight:700;letter-spacing:-2px}
+
+/* HERO */
+.hero{
+  min-height:100vh;padding:135px 6% 80px;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.7fr);
+  gap:70px;align-items:center;position:relative;overflow:hidden;
+}
+.hero:before{
+  content:"";position:absolute;width:48vw;height:48vw;right:-17vw;top:5vh;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.075),transparent 68%);
+  filter:blur(24px);pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;max-width:850px}
+.eyebrow,.section-label{
+  color:#999;text-transform:uppercase;letter-spacing:3px;font-size:10px;
+}
+.eyebrow{margin-bottom:28px}
+.hero h1{
+  font-size:clamp(62px,7vw,112px);line-height:.87;letter-spacing:-5px;
+  font-weight:800;max-width:900px;
+}
+.hero h1 span{color:#7d7d7d}
+.hero-description{
+  margin-top:34px;max-width:650px;color:#c9c9c9;
+  line-height:1.7;font-size:17px;
+}
+.hero-buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 22px;border:1px solid #303030;border-radius:100px;
+  font-size:12px;transition:transform .25s var(--ease),background .25s ease,color .25s ease,border-color .25s ease;
+}
+.btn-primary{background:#fff;color:#000;border-color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.btn-primary):hover{border-color:#666;background:#151515}
+.hero-image{
+  position:relative;width:min(100%,520px);height:680px;justify-self:end;
+  overflow:hidden;border:1px solid #242424;background:#111;
+  box-shadow:0 30px 80px rgba(0,0,0,.32);
+}
+.hero-image:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.28));
+  pointer-events:none;
+}
+.hero-image img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:grayscale(100%);transition:transform .7s var(--ease),filter .5s ease;
+}
+.hero-image:hover img{transform:scale(1.025);filter:grayscale(100%) contrast(1.05)}
+.hero-scroll{
+  position:absolute;bottom:28px;left:6%;color:#626262;
+  font-size:9px;letter-spacing:3px;text-transform:uppercase;
+}
+
+/* GENERAL */
+section{padding:110px 6%}
+.section-label{margin-bottom:16px}
+.section-title{
+  font-size:clamp(44px,5.8vw,78px);letter-spacing:-3.5px;
+  line-height:.98;margin-bottom:52px;font-weight:700;
+}
+
+/* SHOWREEL */
+.showreel{background:var(--soft)}
+.reel-container{
+  width:100%;max-width:720px;margin:0 auto;
+  aspect-ratio:9/16;background:#050505;border:1px solid var(--line);
+  overflow:hidden;position:relative;
+}
+.reel-container iframe{
+  position:absolute;inset:0;width:100%;height:100%;display:block;border:0;
+}
+.video-note{
+  margin:16px auto 0;max-width:720px;color:#727272;font-size:12px;line-height:1.6;
+}
+
+/* PROJECTS */
+.projects-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;align-items:start;
+}
+.project{
+  background:var(--card);border:1px solid #1e1e1e;overflow:hidden;
+  transition:transform .35s var(--ease),border-color .35s ease;
+}
+.project:hover{transform:translateY(-5px);border-color:#3b3b3b}
+.project-video{
+  width:100%;aspect-ratio:9/16;background:#070707;
+  position:relative;overflow:hidden;
+}
+.project-video iframe{
+  position:absolute;inset:0;width:100%;height:100%;display:block;border:0;
+  transition:transform .55s var(--ease);
+}
+.project:hover .project-video iframe{transform:scale(1.012)}
+.project-info{padding:18px 20px 22px}
+.project-category{
+  color:#707070;font-size:10px;text-transform:uppercase;
+  letter-spacing:2px;margin-bottom:8px;
+}
+.project-title{font-size:19px;margin-bottom:7px;font-weight:600}
+.project-description{color:#929292;font-size:13px;line-height:1.6}
+
+/* SERVICES */
+.services{background:var(--soft)}
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+}
+.service{
+  padding:30px 24px 34px;border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.service:last-child{border-right:0}
+.service-number{color:#555;font-size:10px;margin-bottom:48px}
+.service h3{font-size:19px;margin-bottom:12px}
+.service p{color:#888;line-height:1.75;font-size:14px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.about-text{
+  font-size:clamp(23px,2.3vw,31px);line-height:1.42;
+  color:#d1d1d1;max-width:680px;
+}
+.about-details{color:#858585;line-height:1.8;font-size:14px}
+.about-details strong{color:#fff;font-weight:600}
+.detail-block+.detail-block{margin-top:26px}
+
+/* CONTACT */
+.contact{background:#f2f2f2;color:#080808;position:relative;overflow:hidden}
+.contact .section-label{color:#999}
+.contact h2{
+  font-size:clamp(50px,8vw,112px);line-height:.88;
+  letter-spacing:-6px;max-width:1000px;
+}
+.contact-text{
+  margin-top:30px;color:#555;max-width:560px;
+  line-height:1.7;font-size:16px;
+}
+.contact-links{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.contact-links a{
+  padding:13px 19px;border:1px solid #bcbcbc;border-radius:100px;
+  font-size:13px;transition:.25s ease;
+}
+.contact-links a:hover{background:#000;color:#fff;border-color:#000;transform:translateY(-2px)}
+.contact:after{
+  content:"LET'S CREATE";position:absolute;right:-4vw;bottom:-5vw;
+  font-size:clamp(80px,15vw,230px);font-weight:800;letter-spacing:-10px;
+  line-height:.8;color:rgba(0,0,0,.035);white-space:nowrap;pointer-events:none;
+}
+
+/* FOOTER */
+footer{
+  padding:27px 6%;background:#070707;color:#5d5d5d;
+  display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.2px;
+}
+footer a{transition:color .25s}
+footer a:hover{color:#fff}
+
+/* LIGHT SCROLL REVEAL — never hides content before JS */
+.reveal{
+  transform:translateY(12px);
+  transition:transform .55s var(--ease);
+}
+.reveal.visible{transform:none}
+
+/* PROGRESS */
+.scroll-progress{
+  position:fixed;top:0;left:0;width:0;height:2px;background:#fff;
+  z-index:10001;box-shadow:0 0 14px rgba(255,255,255,.55);
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr 380px;gap:40px}
+  .hero-image{width:380px;height:580px}
+  .hero h1{font-size:clamp(58px,8vw,92px)}
+}
+@media(max-width:800px){
+  nav{padding:18px 5%}
+  .nav-links{display:none}
+  .menu-toggle{display:flex}
+  .hero{
+    padding:125px 5% 80px;min-height:auto;
+    display:flex;flex-direction:column;align-items:flex-start;gap:42px;
+  }
+  .hero-content{order:1}
+  .hero-image{
+    order:2;align-self:center;width:min(82vw,430px);
+    height:min(110vw,610px);
+  }
+  .hero h1{font-size:clamp(56px,13vw,96px);letter-spacing:-4px}
+  .hero-description{font-size:16px}
+  .hero-scroll{left:5%}
+  section{padding:85px 5%}
+  .section-title{margin-bottom:38px;letter-spacing:-2.5px}
+  .projects-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .project-info{padding:15px}
+  .project-title{font-size:16px}
+  .project-description{font-size:12px}
+  .services-grid{grid-template-columns:1fr}
+  .service,.service:last-child{border-right:0}
+  .about-grid{grid-template-columns:1fr;gap:42px}
+  .contact h2{letter-spacing:-4px}
+  footer{flex-direction:column;gap:8px}
+}
+@media(max-width:520px){
+  .mobile-menu-links a{font-size:31px}
+  .hero{padding-top:120px}
+  .hero-image{width:84vw;height:112vw;max-height:560px}
+  .hero h1{letter-spacing:-3.5px}
+  .hero-buttons{flex-direction:column;align-items:flex-start}
+  .projects-grid{grid-template-columns:1fr}
+  .project-video{aspect-ratio:9/16}
+  .project-description{display:none}
+  .contact h2{font-size:clamp(48px,15vw,75px);letter-spacing:-3px}
+  .contact-links{flex-direction:column;align-items:stretch}
+  .contact-links a{text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{
+    animation:none!important;transition-duration:.01ms!important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav>
+  <a href="#top" class="logo">MOHAMMED <span>SOLIMAN</span></a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul class="mobile-menu-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<main id="top">
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Video Editor / Creative Production / Production Manager</div>
+    <h1>I MAKE<br><span>VISUALS</span><br>MATTER.</h1>
+    <p class="hero-description">
+      I work across editing, creative production and visual storytelling — from developing an idea to delivering the final piece.
+    </p>
+    <div class="hero-buttons">
+      <a href="#work" class="btn btn-primary">View Selected Work</a>
+      <a href="#contact" class="btn">Let's Work Together</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="profile.jpg.jpeg" alt="Mohammed Soliman" loading="eager" decoding="async">
+  </div>
+
+  <div class="hero-scroll">Scroll to explore ↓</div>
+</header>
+
+<section class="showreel" id="showreel">
+  <div class="section-label">01 — Showreel</div>
+  <h2 class="section-title">Selected work.</h2>
+  <div class="reel-container">
+    <iframe
+      src="https://go.screenpal.com/player/cOQoXmnwMHc?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+      allow="fullscreen *;"
+      allowfullscreen
+      scrolling="no"
+      title="Mohammed Soliman Showreel">
+    </iframe>
+  </div>
+  <p class="video-note">Showreel — selected edits, creative production and visual storytelling.</p>
+</section>
+
+<section id="work">
+  <div class="section-label">02 — Selected Projects</div>
+  <h2 class="section-title">Work that speaks<br>for itself.</h2>
+
+  <div class="projects-grid">
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://viddler.com/embed/player?id=17575&color=default"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 01"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Promo</div>
+        <h3 class="project-title">Selected Work 01</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://viddler.com/embed/player?id=17578&color=default"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 02"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Cinematic Commercial</div>
+        <h3 class="project-title">Selected Work 02</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://viddler.com/embed/player?id=17579&color=default"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Selected Work 03"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Teaser</div>
+        <h3 class="project-title">Selected Work 03</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <!-- Massar replaces the old Reel 4 -->
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQolfnwMJ7?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Massar"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Massar</div>
+        <h3 class="project-title">Massar</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfz?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 05"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 05</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfa?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 06"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 06</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfA?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 07"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 07</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfy?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 08"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 08</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwfx?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 09"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 09</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQhYNnwwf4?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Reel 10"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Reel</div>
+        <h3 class="project-title">Selected Work 10</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <!-- New El Gaber Group reels -->
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQoXmnwMmW?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Campaign</div>
+        <h3 class="project-title">El Gaber Group Campaign</h3>
+        <p class="project-description">Campaign editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQoXmnwMm9?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group Campaign"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Campaign</div>
+        <h3 class="project-title">El Gaber Group Campaign</h3>
+        <p class="project-description">Campaign editing and visual storytelling.</p>
+      </div>
+    </article>
+
+    <!-- New Markaz Etkalem project -->
+    <article class="project">
+      <div class="project-video">
+        <iframe src="https://go.screenpal.com/player/cOQoXmnwMmR?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=1&embed=1&cl=1"
+          allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Markaz Etkalem"></iframe>
+      </div>
+      <div class="project-info">
+        <div class="project-category">Campaign</div>
+        <h3 class="project-title">Markaz Etkalem</h3>
+        <p class="project-description">Video editing and visual storytelling.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="section-label">03 — What I Do</div>
+  <h2 class="section-title">More than<br>just editing.</h2>
+  <div class="services-grid">
+    <div class="service">
+      <div class="service-number">01</div>
+      <h3>Video Editing</h3>
+      <p>Editing commercials, reels and cinematic content with a focus on storytelling, pacing, sound and visuals.</p>
+    </div>
+    <div class="service">
+      <div class="service-number">02</div>
+      <h3>Creative Production</h3>
+      <p>Turning ideas into executable visual concepts and managing the creative process from planning to delivery.</p>
+    </div>
+    <div class="service">
+      <div class="service-number">03</div>
+      <h3>Production Management</h3>
+      <p>Coordinating workflow, organizing production requirements and keeping projects moving from pre-production to final delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-label">04 — About</div>
+  <div class="about-grid">
+    <div class="about-text">
+      I'm Mohammed Soliman — a Video Editor and Production Manager focused on turning ideas into strong visual content.
+    </div>
+    <div class="about-details">
+      <div class="detail-block"><strong>Based in</strong><br>Egypt</div>
+      <div class="detail-block"><strong>Specialized in</strong><br>Commercials / Reels / Cinematic Content</div>
+      <div class="detail-block"><strong>Tools</strong><br>DaVinci Resolve / Adobe Premiere Pro / CapCut</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-label">05 — Contact</div>
+  <h2>HAVE A PROJECT<br>IN MIND?</h2>
+  <p class="contact-text">
+    Let's create something worth watching. For collaborations, commercial projects or creative production work, get in touch.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:mohammedsoliman546@gmail.com">Email</a>
+    <a href="https://wa.me/201094677843" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://www.instagram.com/sollii.01/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.behance.net/mohammedsoliman8" target="_blank" rel="noopener noreferrer">Behance</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 Mohammed Soliman</span>
+  <span>Video Editor / Creative Production / Production Manager</span>
+</footer>
+
+<script>
+(() => {
+  const body = document.body;
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+
+  function closeMenu(){
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded','false');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden','true');
+    body.classList.remove('menu-open');
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = !menu.classList.contains('open');
+    toggle.classList.toggle('active', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    menu.classList.toggle('open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    body.classList.toggle('menu-open', open);
+  });
+
+  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+  /* Very light scroll motion. Content is visible even before JS runs. */
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.08, rootMargin:'0px 0px -20px 0px'});
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+
+  /* Scroll progress */
+  const root = document.documentElement;
+  const progress = document.getElementById('scrollProgress');
+
+  function updateProgress(){
+    const max = root.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* Smooth internal links */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if(target){
+        event.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

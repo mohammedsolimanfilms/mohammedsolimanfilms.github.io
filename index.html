@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 6%;display:
 .hero h1 span{color:#9b9b9b}.hero-description{margin-top:36px;max-width:620px;color:#cfcfcf;line-height:1.7;font-size:16px}.hero-buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border:1px solid #303030;border-radius:100px;font-size:12px;transition:.3s var(--ease)}.btn-primary{background:#fff;color:#000;border-color:#fff}.btn:hover{transform:translateY(-3px)}.btn:not(.btn-primary):hover{border-color:#666;background:#151515}
 .hero-image{position:relative;right:auto;top:auto;transform:none;width:min(100%,600px);height:750px;min-height:0;justify-self:end;overflow:hidden;border-radius:3px;border:1px solid #242424;background:#111}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.28));pointer-events:none}.hero-image img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(100%);transition:transform .8s var(--ease)}.hero-image:hover img{transform:scale(1.03)}.hero-scroll{position:absolute;bottom:32px;left:6%;color:#666;font-size:9px;letter-spacing:3px;text-transform:uppercase}
 section{padding:120px 6%}.section-label{margin-bottom:18px;color:#9b9b9b}.section-title{font-size:clamp(44px,5.8vw,78px);letter-spacing:-3.5px;line-height:.98;margin-bottom:58px;font-weight:700}
-.showreel{background:var(--soft)}.reel-container{width:100%;aspect-ratio:9/16;max-width:420px;margin-inline:auto;background:#050505;border:1px solid var(--line);overflow:hidden;position:relative}.reel-container video{width:100%;height:100%;display:block;object-fit:contain;background:#050505}.reel-container iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0}.video-note{margin-top:14px;color:#626262;font-size:10px;letter-spacing:.3px}
+.showreel{background:var(--soft)}.reel-container{width:100%;aspect-ratio:16/9;background:#050505;border:1px solid var(--line);overflow:hidden;position:relative}.reel-container video{width:100%;height:100%;display:block;object-fit:contain;background:#050505}.reel-container iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0}.video-note{margin-top:14px;color:#626262;font-size:10px;letter-spacing:.3px}
 .projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start}.project{background:var(--card);border:1px solid #1e1e1e;overflow:hidden;transition:transform .45s var(--ease),border-color .45s}.project:hover{transform:translateY(-7px);border-color:#363636}.project-video{width:100%;aspect-ratio:9/16;background:#070707;position:relative;overflow:hidden}.project-video video{width:100%;height:100%;display:block;object-fit:cover;background:#070707}.project-video iframe{position:absolute;inset:0;width:100%;height:100%;display:block;border:0}.project-info{padding:20px 21px 23px}.project-category{color:#6d6d6d;font-size:9px;text-transform:uppercase;letter-spacing:2px;margin-bottom:9px}.project-title{font-size:19px;margin-bottom:8px;font-weight:600}.project-description{color:#858585;font-size:12px;line-height:1.65}
 .services{background:var(--soft)}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.service{padding:32px 24px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.service:last-child{border-right:0}.service-number{color:#555;font-size:10px;margin-bottom:52px}.service h3{font-size:19px;margin-bottom:13px}.service p{color:#858585;line-height:1.75;font-size:12px}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about-text{font-size:clamp(23px,2.3vw,31px);line-height:1.42;color:#d1d1d1;max-width:680px}.about-details{color:#818181;line-height:1.8;font-size:13px}.about-details strong{color:#fff;font-weight:600}.detail-block+.detail-block{margin-top:28px}
@@ -159,160 +159,72 @@ footer a:hover{color:#fff}
 </h1><p class="hero-description">I work across editing, creative production and visual storytelling — from developing an idea to delivering the final piece.</p><div class="hero-buttons"><a href="#work" class="btn btn-primary">View Selected Work</a><a href="#contact" class="btn">Let's Work Together</a></div></div>
 <div class="hero-scroll">Scroll to explore ↓</div>
 </header>
-<section class="showreel" id="showreel"><div class="section-label reveal">01 — Showreel</div><h2 class="section-title reveal">The work.</h2><div class="reel-container reveal"><iframe src="https://streamable.com/e/ozravq?" allow="fullscreen *;" allowfullscreen scrolling="no" title="Mohammed Soliman Showreel"></iframe></div><p class="video-note reveal">Showreel — editing, creative production, visual storytelling, pacing and post-production.</p></section>
+<section class="showreel" id="showreel"><div class="section-label reveal">01 — Showreel</div><h2 class="section-title reveal">The work.</h2><div class="reel-container reveal"><iframe src="https://go.screenpal.com/player/cOQoXmnwMHc?ff=1&title=0&ahc=1&dcc=1&tl=1&bg=transparent&share=1&download=0&embed=1&cl=1" allow="fullscreen *;" allowfullscreen scrolling="no" title="Mohammed Soliman Showreel"></iframe></div><p class="video-note reveal">Showreel — editing, creative production, visual storytelling, pacing and post-production.</p></section>
 <section id="work"><div class="section-label reveal">02 — Selected Projects</div><h2 class="section-title reveal">Work that speaks<br>for itself.</h2><div class="projects-grid">
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/vvhgar?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="AI Advertisement — Al-Quds Engineering Office"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">AI Advertisement</div>
-    <h3 class="project-title">AI Advertisement — Al-Quds Engineering Office</h3>
-    <p class="project-description">AI-assisted visuals, video editing, sound design, sound effects and text animation.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/k9lcvm?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Istanbul Shawarma Restaurant Ad"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Restaurant Advertisement</div>
-    <h3 class="project-title">Istanbul Shawarma Restaurant Ad</h3>
-    <p class="project-description">Video editing and promotional content for Istanbul Shawarma Restaurant.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/x9j0o8?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Dr. Asal Advertisement"></iframe>
+    <iframe src="https://streamable.com/e/x9j0o8?" allow="fullscreen" allowfullscreen scrolling="no" title="Dr El Doktor Asal Advertisement"></iframe>
   </div>
   <div class="project-info">
     <div class="project-category">Advertisement</div>
-    <h3 class="project-title">Dr. Asal Advertisement</h3>
-    <p class="project-description">Video editing and promotional storytelling.</p>
+    <h3 class="project-title">Dr El Doktor Asal Advertisement</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/nxpc6z?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group — Copy 1"></iframe>
+    <iframe src="https://streamable.com/e/j17y34?" allow="fullscreen" allowfullscreen scrolling="no" title="Raval Airlines Advertisement"></iframe>
   </div>
   <div class="project-info">
-    <div class="project-category">Campaign</div>
-    <h3 class="project-title">El Gaber Group — Copy 1</h3>
-    <p class="project-description">Video editing and promotional storytelling for El Gaber Group.</p>
+    <div class="project-category">Aviation Advertisement</div>
+    <h3 class="project-title">Raval Airlines Advertisement</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/vpe6q4?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Gaber Group — Copy 2"></iframe>
+    <iframe src="https://streamable.com/e/pcxqq7?" allow="fullscreen" allowfullscreen scrolling="no" title="Vision Lift Elevators Advertisement"></iframe>
   </div>
   <div class="project-info">
-    <div class="project-category">Campaign</div>
-    <h3 class="project-title">El Gaber Group — Copy 2</h3>
-    <p class="project-description">Video editing and promotional storytelling for El Gaber Group.</p>
+    <div class="project-category">Commercial Advertisement</div>
+    <h3 class="project-title">Vision Lift Elevators Advertisement</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/b263l1?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Shawarma El Khan — Copy 1"></iframe>
+    <iframe src="https://streamable.com/e/so4bz4?" allow="fullscreen" allowfullscreen scrolling="no" title="Dar Al Arqam Online Learning Platform"></iframe>
   </div>
   <div class="project-info">
-    <div class="project-category">Restaurant Advertisement</div>
-    <h3 class="project-title">Shawarma El Khan — Copy 1</h3>
-    <p class="project-description">Video editing and promotional content for Shawarma El Khan.</p>
+    <div class="project-category">Online Education</div>
+    <h3 class="project-title">Dar Al Arqam Online Learning Platform</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/d6w9qc?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Shawarma El Khan — Copy 2"></iframe>
+    <iframe src="https://streamable.com/e/yhpr6u?" allow="fullscreen" allowfullscreen scrolling="no" title="El Khan Restaurant — Teaser 3"></iframe>
   </div>
   <div class="project-info">
-    <div class="project-category">Restaurant Advertisement</div>
-    <h3 class="project-title">Shawarma El Khan — Copy 2</h3>
-    <p class="project-description">Video editing and promotional content for Shawarma El Khan.</p>
+    <div class="project-category">Restaurant Teaser</div>
+    <h3 class="project-title">El Khan Restaurant — Teaser 3</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 <article class="project reveal">
   <div class="project-video">
     <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/j5mv22?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="El Rahma Air Conditioning Company"></iframe>
+    <iframe src="https://streamable.com/e/uqy018?" allow="fullscreen" allowfullscreen scrolling="no" title="El Masreya Real Estate Advertisement"></iframe>
   </div>
   <div class="project-info">
-    <div class="project-category">Commercial</div>
-    <h3 class="project-title">El Rahma Air Conditioning Company</h3>
-    <p class="project-description">Promotional video editing for El Rahma Air Conditioning Company.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/x0q6q8?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Rokna Café Advertisement"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Café Advertisement</div>
-    <h3 class="project-title">Rokna Café Advertisement</h3>
-    <p class="project-description">Promotional content for a café featuring desserts, iced coffee and more.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/344gf8?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Dr. Mohamed Hassan — Copy 1"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Medical Reel</div>
-    <h3 class="project-title">Dr. Mohamed Hassan — Copy 1</h3>
-    <p class="project-description">Video editing and visual storytelling for Dr. Mohamed Hassan.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/5a8wpr?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Dr. Mohamed Hassan — Copy 2"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Medical Reel</div>
-    <h3 class="project-title">Dr. Mohamed Hassan — Copy 2</h3>
-    <p class="project-description">Video editing and visual storytelling for Dr. Mohamed Hassan.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/lnd3kl?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Grand Opening Promo"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Promo</div>
-    <h3 class="project-title">Grand Opening Promo</h3>
-    <p class="project-description">Video editing for a grand opening promotional reel.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/phug97?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Shish Kebab Restaurant — Copy 1"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Restaurant Advertisement</div>
-    <h3 class="project-title">Shish Kebab Restaurant — Copy 1</h3>
-    <p class="project-description">Video editing and promotional content for a shish kebab restaurant.</p>
-  </div>
-</article>
-<article class="project reveal">
-  <div class="project-video">
-    <button class="video-fullscreen" type="button" aria-label="Watch fullscreen" title="Watch fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M21 16v5h-5"/></svg></button>
-    <iframe src="https://streamable.com/e/mm8vgx?" allow="autoplay; fullscreen" allowfullscreen scrolling="no" title="Shish Kebab Restaurant — Copy 2"></iframe>
-  </div>
-  <div class="project-info">
-    <div class="project-category">Restaurant Advertisement</div>
-    <h3 class="project-title">Shish Kebab Restaurant — Copy 2</h3>
-    <p class="project-description">Video editing and promotional content for a shish kebab restaurant.</p>
+    <div class="project-category">Real Estate Advertisement</div>
+    <h3 class="project-title">El Masreya Real Estate Advertisement</h3>
+    <p class="project-description">Video editing, visual storytelling, pacing and post-production.</p>
   </div>
 </article>
 </div></section>

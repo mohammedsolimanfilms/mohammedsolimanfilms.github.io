@@ -44,7 +44,14 @@ a{color:inherit}
 .play small{font-size:.85rem;font-weight:500}
 .play strong{font-family:Lalezar,sans-serif;font-weight:400;font-size:1.7rem;line-height:1.15;display:block}
 .reel .play{background:var(--yellow);color:var(--ink)}
-.reel .play .ic{background:var(--cobalt);color:#fff}
+ .reel .play .ic{background:var(--cobalt);color:#fff}
+/* Showreel: original cobalt/yellow frame stays visible behind the video cover */
+.reel .frame{background:var(--yellow);padding:9px;box-shadow:12px 14px 0 var(--ink)}
+.reel .frame .reel-poster{position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px;pointer-events:none;background:var(--cobalt)}
+.reel .frame .reel-trigger{position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:14px;text-align:right;font-family:inherit;color:#fff;background:linear-gradient(180deg,rgba(17,19,26,.12),rgba(17,19,26,.55))}
+.reel .frame .reel-trigger .ic{width:54px;height:54px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:1.35rem;padding-right:4px;align-self:center;margin:auto 0}
+.reel .frame .reel-trigger strong{font-family:Lalezar,sans-serif;font-weight:400;font-size:1.45rem;line-height:1.15}
+.reel .frame .reel-trigger small{font-size:.76rem;font-weight:700}
 /* work */
 .work{background:var(--ink);color:var(--paper);padding:84px 0}
 h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:10px}
@@ -104,7 +111,12 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
   .btn.o{color:#fff;border-color:rgba(255,255,255,.85);margin-inline-start:6px}
   .reel{width:min(54vw,195px);max-width:195px;margin:0 auto}
   .frame{border-radius:11px;box-shadow:7px 8px 0 var(--ink)}
-  .reel .frame{border-radius:11px}
+  .reel .frame{border-radius:11px;padding:7px;box-shadow:7px 8px 0 var(--ink)}
+  .reel .frame .reel-poster{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);border-radius:6px}
+  .reel .frame .reel-trigger{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);padding:10px;border-radius:6px}
+  .reel .frame .reel-trigger .ic{width:44px;height:44px;font-size:1.05rem}
+  .reel .frame .reel-trigger strong{font-size:1.2rem}
+  .reel .frame .reel-trigger small{font-size:.68rem}
   .play{padding:12px}
   .play .ic{width:48px;height:48px;font-size:1.15rem}
   .play strong{font-size:1.35rem}
@@ -240,7 +252,14 @@ P.forEach(function(p){
  var s=document.createElement("span");s.textContent=p[3];
  var a=document.createElement("a");a.href="https://streamable.com/"+p[0];a.target="_blank";a.rel="noopener noreferrer";a.textContent="فتح في صفحة";
  m.append(s,a);c.append(fr,m);grid.appendChild(c)});
-var reel=document.querySelector(".reel .frame");reel.appendChild(mk("ngnhax","Showreel 2026","أحدث شغلي"));
+var reel=document.querySelector(".reel .frame");
+// A non-autoplay Streamable embed supplies the actual reel cover; the video only starts after a click.
+var poster=document.createElement("iframe");
+poster.className="reel-poster";poster.src="https://streamable.com/e/ngnhax";poster.title="Showreel 2026 cover";poster.allow="fullscreen";poster.allowFullscreen=true;poster.loading="lazy";
+var trigger=document.createElement("button");trigger.className="reel-trigger";trigger.type="button";trigger.setAttribute("aria-label","تشغيل Showreel 2026");
+trigger.innerHTML='<small>أحدث شغلي</small><span class="ic">▶</span><strong>Showreel 2026</strong>';
+trigger.onclick=function(){var player=document.createElement("iframe");player.src="https://streamable.com/e/ngnhax?autoplay=1";player.allow="autoplay; fullscreen";player.allowFullscreen=true;player.title="Showreel 2026";player.style.cssText="position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px";reel.replaceChildren(player)};
+reel.append(poster,trigger);
 var chips=document.getElementById("chips");
 Object.keys(G).forEach(function(k){
  var b=document.createElement("button");b.type="button";b.textContent=G[k];b.setAttribute("aria-pressed",k=="all");

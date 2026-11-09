@@ -61,7 +61,7 @@ h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:10px}
 .chips button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .card .frame{box-shadow:none;border-radius:10px;background:#090a0e;overflow:hidden}
-.card .frame iframe{pointer-events:none}
+.card .frame iframe{pointer-events:auto}
 .card .cover-trigger{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(17,19,26,.02) 45%,rgba(17,19,26,.38));display:grid;place-items:center}
 .card .cover-trigger .ic{width:52px;height:52px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:1.2rem;padding-right:3px;box-shadow:0 4px 18px #0005}
 .card .meta{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:74px;padding:10px 12px;margin-top:0;border-radius:0 0 10px 10px;opacity:1;color:var(--ink);background:var(--yellow)}
@@ -244,7 +244,7 @@ var G={all:"الكل",f:"مطاعم وأكل",c:"شركات وعلامات",m:"�
 function mk(id,brand,type){
  var cover=document.createElement("iframe");cover.src="https://streamable.com/e/"+id;cover.title=brand+" cover";cover.allow="fullscreen";cover.allowFullscreen=true;cover.loading="lazy";
  var b=document.createElement("button");b.className="cover-trigger";b.type="button";b.setAttribute("aria-label","تشغيل: "+brand);b.innerHTML='<span class="ic">▶</span>';
- b.onclick=function(){var f=document.createElement("iframe");f.src="https://streamable.com/e/"+id+"?autoplay=1";f.allow="autoplay; fullscreen";f.allowFullscreen=true;f.title=brand;f.style.cssText="position:absolute;inset:0;width:100%;height:100%;border:0";b.parentNode.replaceChildren(f)};
+ b.onclick=function(){var f=document.createElement("iframe");f.src="https://streamable.com/e/"+id+"?autoplay=1";f.allow="autoplay; fullscreen; picture-in-picture; encrypted-media";f.allowFullscreen=true;f.title=brand;f.style.cssText="position:absolute;inset:0;width:100%;height:100%;border:0";b.parentNode.replaceChildren(f)};
  return {cover:cover,trigger:b}}
 var grid=document.getElementById("grid");
 P.forEach(function(p){
@@ -261,7 +261,7 @@ var poster=document.createElement("iframe");
 poster.className="reel-poster";poster.src="https://streamable.com/e/ngnhax";poster.title="Showreel 2026 cover";poster.allow="fullscreen";poster.allowFullscreen=true;poster.loading="lazy";
 var trigger=document.createElement("button");trigger.className="reel-trigger";trigger.type="button";trigger.setAttribute("aria-label","تشغيل Showreel 2026");
 trigger.innerHTML='<small>أحدث شغلي</small><span class="ic">▶</span><strong>Showreel 2026</strong>';
-trigger.onclick=function(){var player=document.createElement("iframe");player.src="https://streamable.com/e/ngnhax?autoplay=1";player.allow="autoplay; fullscreen";player.allowFullscreen=true;player.title="Showreel 2026";player.style.cssText="position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px";reel.replaceChildren(player)};
+trigger.onclick=function(){var player=document.createElement("iframe");player.src="https://streamable.com/e/ngnhax?autoplay=1";player.allow="autoplay; fullscreen; picture-in-picture; encrypted-media";player.allowFullscreen=true;player.title="Showreel 2026";player.style.cssText="position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px";reel.replaceChildren(player)};
 reel.append(poster,trigger);
 var chips=document.getElementById("chips");
 Object.keys(G).forEach(function(k){

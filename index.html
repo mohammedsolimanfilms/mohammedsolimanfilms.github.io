@@ -60,19 +60,20 @@ h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:10px}
 .chips button{font:inherit;padding:8px 20px;border-radius:99px;border:2px solid #3a3e4c;background:none;color:inherit;cursor:pointer}
 .chips button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card .frame{box-shadow:none;border-radius:10px;background:#090a0e;overflow:hidden}
-.card .frame iframe{pointer-events:auto}
-.card .cover-trigger{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;background:linear-gradient(180deg,rgba(17,19,26,.02) 45%,rgba(17,19,26,.38));display:grid;place-items:center}
+.card{--card-color:var(--yellow);--card-ink:var(--ink)}
+.card .frame{box-shadow:12px 14px 0 var(--ink);border-radius:14px;background:var(--card-color);padding:9px;overflow:hidden}
+.card .frame iframe{pointer-events:auto;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px}
+.card .cover-trigger{position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px;cursor:pointer;background:linear-gradient(180deg,rgba(17,19,26,.02) 45%,rgba(17,19,26,.38));display:grid;place-items:center}
 .card .cover-trigger .ic{width:52px;height:52px;border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-size:1.2rem;padding-right:3px;box-shadow:0 4px 18px #0005}
-.card .meta{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:74px;padding:10px 12px;margin-top:0;border-radius:0 0 10px 10px;opacity:1;color:var(--ink);background:var(--yellow)}
+.card .meta{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:74px;padding:8px 9px 0;margin-top:0;border-radius:0;opacity:1;color:var(--card-ink);background:var(--card-color)}
 .card .meta strong{font-family:Lalezar,sans-serif;font-weight:400;font-size:1.12rem;line-height:1.35}
 .card .meta span{font-size:.72rem;opacity:.78;line-height:1.4}
 .card .meta a{font-size:.68rem;text-decoration:none;border-bottom:1px solid currentColor;opacity:.72}
 .card[hidden]{display:none}
-.g-f .meta{background:var(--yellow);color:var(--ink)}
-.g-c .meta{background:var(--cobalt);color:#fff}
-.g-m .meta{background:var(--paper);color:var(--ink)}
-.g-r .meta{background:var(--coral);color:var(--ink)}
+.g-f{--card-color:var(--yellow);--card-ink:var(--ink)}
+.g-c{--card-color:var(--cobalt);--card-ink:#fff}
+.g-m{--card-color:var(--paper);--card-ink:var(--ink)}
+.g-r{--card-color:var(--coral);--card-ink:var(--ink)}
 /* about */
 .about{padding:84px 0}
 .two{display:grid;grid-template-columns:1.1fr 1fr;gap:56px}
@@ -130,9 +131,11 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
   .chips{gap:7px;margin-bottom:22px}
   .chips button{font-size:.82rem;padding:6px 13px}
   .grid{gap:10px}
-  .card .frame{border-radius:8px}
+  .card .frame{border-radius:11px;padding:7px;box-shadow:7px 8px 0 var(--ink)}
+  .card .frame iframe{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);border-radius:6px}
+  .card .cover-trigger{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);border-radius:6px}
   .card .cover-trigger .ic{width:42px;height:42px;font-size:1rem}
-  .card .meta{min-height:62px;padding:7px 8px;border-radius:0 0 8px 8px;gap:2px}
+  .card .meta{min-height:62px;padding:7px 7px 0;border-radius:0;gap:2px}
   .card .meta strong{font-size:.92rem;line-height:1.3}
   .card .meta span{font-size:.64rem}
   .card .meta a{font-size:.6rem}
@@ -244,7 +247,7 @@ var G={all:"الكل",f:"مطاعم وأكل",c:"شركات وعلامات",m:"�
 function mk(id,brand,type){
  var cover=document.createElement("iframe");cover.src="https://streamable.com/e/"+id;cover.title=brand+" cover";cover.allow="fullscreen";cover.allowFullscreen=true;cover.loading="lazy";
  var b=document.createElement("button");b.className="cover-trigger";b.type="button";b.setAttribute("aria-label","تشغيل: "+brand);b.innerHTML='<span class="ic">▶</span>';
- b.onclick=function(){var f=document.createElement("iframe");f.src="https://streamable.com/e/"+id+"?autoplay=1";f.allow="autoplay; fullscreen; picture-in-picture; encrypted-media";f.allowFullscreen=true;f.title=brand;f.style.cssText="position:absolute;inset:0;width:100%;height:100%;border:0";b.parentNode.replaceChildren(f)};
+ b.onclick=function(){var f=document.createElement("iframe");f.src="https://streamable.com/e/"+id+"?autoplay=1";f.allow="autoplay; fullscreen; picture-in-picture; encrypted-media";f.allowFullscreen=true;f.title=brand;f.style.cssText="position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px";b.parentNode.replaceChildren(f)};
  return {cover:cover,trigger:b}}
 var grid=document.getElementById("grid");
 P.forEach(function(p){

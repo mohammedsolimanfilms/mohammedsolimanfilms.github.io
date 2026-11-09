@@ -157,6 +157,30 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
   footer{margin-top:34px;font-size:.78rem}
 }
 @media(prefers-reduced-motion:reduce){.hero h1 i{animation:none}html{scroll-behavior:auto}}
+
+/* Compact, breathable project labels: smaller footprint + subtle glass treatment */
+.grid{gap:20px}
+.card{min-width:0}
+.card .frame{box-shadow:6px 7px 0 rgba(0,0,0,.42);border-radius:12px;padding:7px}
+.card .frame iframe{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);border-radius:6px}
+.card .cover-trigger{inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);border-radius:6px}
+.card .meta{position:relative;isolation:isolate;gap:3px;min-height:0;margin-top:9px;padding:7px 10px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.24);background:color-mix(in srgb,var(--card-color) 76%,rgba(255,255,255,.24));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 14px rgba(0,0,0,.12);overflow:hidden}
+.card .meta strong{font-size:.78rem;line-height:1.38;letter-spacing:0;overflow-wrap:anywhere;word-break:normal}
+.card .meta span{font-size:.61rem;line-height:1.4}
+.card .meta a{font-size:.58rem;line-height:1.35;margin-top:1px}
+@media(max-width:900px){.grid{gap:15px}}
+@media(max-width:760px){.grid{gap:14px}}
+@media(max-width:600px){
+ .grid{gap:13px}
+ .card .frame{border-radius:10px;padding:6px;box-shadow:5px 6px 0 rgba(0,0,0,.42)}
+ .card .frame iframe{inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);border-radius:5px}
+ .card .cover-trigger{inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);border-radius:5px}
+ .card .meta{margin-top:7px;padding:6px 8px 7px;border-radius:8px;gap:3px}
+ .card .meta strong{font-size:.68rem;line-height:1.4}
+ .card .meta span{font-size:.55rem;line-height:1.4}
+ .card .meta a{font-size:.53rem;line-height:1.35}
+}
+
 </style>
 </head>
 <body>

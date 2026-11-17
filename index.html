@@ -195,7 +195,7 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
 .chips button:nth-child(2){background:#fff4c8;border-color:#e5b92b;color:#302600}
 .chips button:nth-child(3){background:#e8eaff;border-color:#6978ff;color:#202b9e}
 .chips button:nth-child(4){background:#f0efeb;border-color:#9c9b94;color:#222}
-.chips button:nth-child(5){background:#ffe5e0;border-color:#ef8c7e;color:#7e281d}
+.chips button:nth-child(5),.chips button:nth-child(6),.chips button:nth-child(7){background:#ffe5e0;border-color:#ef8c7e;color:#7e281d}
 .chips button[aria-pressed="true"]{background:var(--ink)!important;color:#fff!important;border-color:var(--ink)!important;box-shadow:0 5px 0 #8db8a8,0 9px 20px rgba(35,82,68,.13);transform:translateY(-2px)}
 .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 26px;align-items:start}
 .card{min-width:0;display:flex;flex-direction:column;transition:transform .22s ease}
@@ -364,12 +364,23 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
 .work[data-filter="r"] .card.g-r .meta strong{color:#603b25!important}
 .work[data-filter="r"] .card.g-r .meta span{color:#805a40!important}
 
-/* Gym category */
+/* Gym, products and cafés categories */
 .g-g{--card-color:rgba(225,218,245,.88);--card-ink:#49366c}
 .work[data-filter="g"] .card.g-g{--card-color:rgba(225,218,245,.9);--card-ink:#49366c}
 .work[data-filter="g"] .card.g-g .frame{background:rgba(190,169,229,.34)!important;border-color:rgba(151,125,198,.5)!important}
 .work[data-filter="g"] .card.g-g .meta{background:rgba(244,240,251,.88)!important;color:#49366c}
 .work[data-filter="g"] .card.g-g .meta strong{color:#49366c}
+
+.g-p{--card-color:rgba(225,238,218,.9);--card-ink:#3d5934}
+.work[data-filter="p"] .card.g-p{--card-color:rgba(225,238,218,.9);--card-ink:#3d5934}
+.work[data-filter="p"] .card.g-p .frame{background:rgba(173,202,157,.36)!important;border-color:rgba(132,169,114,.52)!important}
+.work[data-filter="p"] .card.g-p .meta{background:rgba(240,247,235,.92)!important;color:#3d5934}
+.work[data-filter="p"] .card.g-p .meta strong{color:#3d5934}
+.g-e{--card-color:rgba(245,229,210,.9);--card-ink:#65472e}
+.work[data-filter="e"] .card.g-e{--card-color:rgba(245,229,210,.9);--card-ink:#65472e}
+.work[data-filter="e"] .card.g-e .frame{background:rgba(220,181,143,.38)!important;border-color:rgba(187,143,104,.55)!important}
+.work[data-filter="e"] .card.g-e .meta{background:rgba(251,243,232,.94)!important;color:#65472e}
+.work[data-filter="e"] .card.g-e .meta strong{color:#65472e}
 </style>
 </head>
 <body>
@@ -432,18 +443,18 @@ var P=[
 ["zq2pne","g","Magic Life Gym","Gym Advertisement"],
 ["a0wx4e","g","Magic Life Gym","Gym Advertisement"],
 ["k9lcvm","f","Istanbul Shawarma Restaurant Ad","Restaurant Advertisement"],
-["yhpr6u","f","Shawarma El Khan — Teaser 3","Restaurant Teaser"],
-["b263l1","f","Shawarma El Khan — Copy 1","Restaurant Advertisement"],
-["d6w9qc","f","Shawarma El Khan — Copy 2","Restaurant Advertisement"],
+["yhpr6u","r","Shawarma El Khan — Teaser 3","Restaurant Teaser"],
+["b263l1","r","Shawarma El Khan — Copy 1","Restaurant Advertisement"],
+["d6w9qc","r","Shawarma El Khan — Copy 2","Restaurant Advertisement"],
 ["vvhgar","c","Al-Quds Engineering Office","AI Advertisement"],
-["x9j0o8","m","Dr. Asal Advertisement","Medical Advertisement"],
+["x9j0o8","p","Dr. Asal Products Advertisement","Product Advertisement"],
 ["uqy018","c","Egyptian State Company Advertisement","Company Advertisement"],
 ["so4bz4","c","Dar Al-Arqam Online Learning Platform","Platform Advertisement"],
 ["j17y34","c","Raval Airlines Advertisement","Airline Advertisement"],
 ["nxpc6z","c","El Gaber Group — Copy 1","Company Campaign"],
 ["vpe6q4","c","El Gaber Group — Copy 2","Company Campaign"],
 ["j5mv22","c","El Rahma Air Conditioning Company","Company Advertisement"],
-["x0q6q8","f","Rokna Café Advertisement","Restaurant Advertisement"],
+["x0q6q8","e","Rokna Café Advertisement","Restaurant Advertisement"],
 ["344gf8","m","Dr. Mohamed Hassan — Copy 1","Medical Reel"],
 ["5a8wpr","m","Dr. Mohamed Hassan — Copy 2","Medical Reel"],
 ["lnd3kl","r","Grand Opening Promo","Grand Opening"],
@@ -453,12 +464,12 @@ var P=[
 ["ugnl4s","f","Shish Kebab Restaurant — Copy 4","Restaurant Advertisement"],
 ["pcxqq7","c","Vision Lift Elevators Advertisement","Company Advertisement"],
 ["ij227d","c","Aswan Nature","Brand Advertisement"],
-["efm7m7","f","Rokna Dessert","Food Advertisement"],
+["efm7m7","e","Rokna Dessert","Dessert Advertisement"],
 ["qc1zvz","r","Abdelbaset Store — Teaser 1","Store Teaser"],
 ["ifkdic","r","Abdelbaset Store — Teaser 2","Store Teaser"],
 ["srca08","r","Wanasah Café — Grand Opening","Café Grand Opening"]
 ];
-var G={g:"جيم",f:"مطاعم",c:"شركات",m:"طبي",r:"تيزر وافتتاحات"};
+var G={g:"جيم",f:"مطاعم",c:"شركات",m:"طبي",r:"تيزر وافتتاحات",p:"منتجات",e:"CAFÉS"};
 function mk(id,brand,type){
  var cover=document.createElement("iframe");cover.src="https://streamable.com/e/"+id;cover.title=brand+" cover";cover.allow="fullscreen";cover.allowFullscreen=true;cover.loading="lazy";
  var b=document.createElement("button");b.className="cover-trigger";b.type="button";b.setAttribute("aria-label","تشغيل: "+brand);b.innerHTML='<span class="ic">▶</span>';

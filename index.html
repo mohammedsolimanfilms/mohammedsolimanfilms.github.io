@@ -258,6 +258,8 @@ footer{margin-top:50px;opacity:.75;font-size:.9rem}
 .work .sub{color:#526b63}
 
 /* Category filters: same color family; only selected state changes */
+.work[data-filter="none"] .grid{display:none}
+
 .chips{border-bottom-color:rgba(23,79,70,.14)}
 .chips button,
 .chips button:nth-child(1),.chips button:nth-child(2),
@@ -480,7 +482,8 @@ trigger.innerHTML='<small>أحدث شغلي</small><span class="ic">▶</span><s
 trigger.onclick=function(){var player=document.createElement("iframe");player.src="https://streamable.com/e/ngnhax?autoplay=1";player.allow="autoplay; fullscreen; picture-in-picture; encrypted-media";player.allowFullscreen=true;player.title="Showreel 2026";player.style.cssText="position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border:0;border-radius:7px";reel.replaceChildren(player)};
 reel.append(poster,trigger);
 var chips=document.getElementById("chips");
-document.querySelector(".work").dataset.filter="all";
+// Keep the gallery closed until a category is selected.
+document.querySelector(".work").dataset.filter="none";
 Object.keys(G).forEach(function(k){
  var b=document.createElement("button");b.type="button";b.textContent=G[k];b.setAttribute("aria-pressed","false");
  b.onclick=function(){chips.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
